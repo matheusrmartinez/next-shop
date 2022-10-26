@@ -2,12 +2,12 @@ import { styled } from "@stitches/react";
 
 export const ProductContainer = styled("main", {
   display: "grid",
-  gridTemplateColumns: "1fr 1fr",
+  gridTemplateColumns: "0.5fr 1fr",
   alignItems: "stretch",
-  gap: "4rem",
+  gap: "1rem",
 
   maxWidth: 1180,
-  margin: "0 auto",
+  margin: "2rem auto",
 });
 export const ImageContainer = styled("div", {
   width: "100%",
@@ -30,13 +30,13 @@ export const ProductDetails = styled("div", {
   flexDirection: "column",
 
   h1: {
-    fontSize: "$2xl",
+    fontSize: "$3xl",
     color: "$gray300",
   },
   span: {
     marginTop: "1rem",
     display: "block",
-    fontSize: "$2xl",
+    fontSize: "$3xl",
     color: "$green300",
   },
 

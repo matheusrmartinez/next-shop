@@ -6,6 +6,7 @@ export const HomeContainer = styled("main", {
   marginLeft: "auto",
   width: "100%",
   minHeight: 656,
+  position: "relative"
 });
 
 export const Product = styled("div", {
@@ -29,7 +30,7 @@ export const Product = styled("div", {
     bottom: "0.25rem",
     left: "0.25rem",
     right: "0.25rem",
-    padding: "2rem",
+    padding: "1.5rem",
 
     borderRadius: 6,
 
@@ -44,14 +45,22 @@ export const Product = styled("div", {
     transition: "all 0.2s ease-in-out",
 
     strong: {
-      fontSize: "$lg",
+      fontSize: "$xl",
       color: "$gray100",
+      display: "block",
     },
 
     span: {
-      fontSize: "$xl",
+      fontSize: "$2xl",
       fontWeight: "bold",
       color: "$green300",
+      display: "block",
+    },
+
+    img: {
+      "&:hover": {
+        filter: "brightness(1.2)",
+      },
     },
   },
 
@@ -61,4 +70,10 @@ export const Product = styled("div", {
       opacity: 1,
     },
   },
+});
+
+export const ProductDetailsContainer = styled("div", {
+  display: "flex",
+  flexDirection: "column",
+  gap: 10,
 });

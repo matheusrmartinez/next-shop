@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { HomeContainer, Product } from "../styles/pages/home";
+import {
+  HomeContainer,
+  ProductDetailsContainer,
+  Product,
+} from "../styles/pages/home";
 
 import { useKeenSlider } from "keen-slider/react";
 import { GetStaticProps } from "next";
@@ -7,6 +11,9 @@ import Stripe from "stripe";
 import { stripe } from "../lib/stripe";
 import Link from "next/link";
 import Head from "next/head";
+import GreenBagLogo from "../assets/green-bag.svg";
+import { CartOverlay } from "../components/cart-overlay";
+import { useState } from "react";
 
 interface HomeProps {
   products: {
@@ -18,9 +25,11 @@ interface HomeProps {
 }
 
 export default function Home({ products }: HomeProps) {
+
+
   const [sliderRef] = useKeenSlider({
     slides: {
-      perView: 3,
+      perView: 2,
       spacing: 48,
     },
   });
@@ -31,6 +40,7 @@ export default function Home({ products }: HomeProps) {
         <title>Home | Ignite Shop</title>
       </Head>
       <HomeContainer ref={sliderRef} className="keen-slider">
+
         {products?.map((product) => (
           <Link
             key={product.id}
@@ -40,8 +50,11 @@ export default function Home({ products }: HomeProps) {
             <Product className="keen-slider__slide">
               <Image src={product.imageUrl} width={520} height={480} alt="" />
               <footer>
-                <strong>{product.name}</strong>
-                <span>{product.price}</span>
+                <ProductDetailsContainer>
+                  <strong>{product.name}</strong>
+                  <span>{product.price}</span>
+                </ProductDetailsContainer>
+                <Image src={GreenBagLogo} width={56} height={56} alt="" />
               </footer>
             </Product>
           </Link>
