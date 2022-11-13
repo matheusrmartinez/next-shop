@@ -13,6 +13,7 @@ export const Header = styled("header", {
   padding: "2rem 0",
   width: "100%",
   maxWidth: 1180,
+  minWidth: 0,
   margin: "0 auto",
   justifyContent: "space-between",
   position: "relative",
@@ -22,11 +23,13 @@ export const Header = styled("header", {
       filter: "brightness(1.5)",
     },
     position: "relative",
+    marginLeft: "1rem",
   },
 
   a: {
     textDecoration: "none",
     position: "relative",
+    marginRight: "1rem",
 
     span: {
       position: "absolute",
