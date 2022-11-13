@@ -12,8 +12,6 @@ import { stripe } from "../lib/stripe";
 import Link from "next/link";
 import Head from "next/head";
 import GreenBagLogo from "../assets/green-bag.svg";
-import { CartOverlay } from "../components/cart-overlay";
-import { useState } from "react";
 
 interface HomeProps {
   products: {

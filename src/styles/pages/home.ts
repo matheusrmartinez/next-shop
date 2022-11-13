@@ -6,7 +6,8 @@ export const HomeContainer = styled("main", {
   marginLeft: "auto",
   width: "100%",
   minHeight: 656,
-  position: "relative"
+  overflow: "hidden",
+  position: "relative",
 });
 
 export const Product = styled("div", {
@@ -16,6 +17,7 @@ export const Product = styled("div", {
   cursor: "pointer",
   position: "relative",
   overflow: "hidden",
+  margin: "1rem",
 
   display: "flex",
   alignItems: "center",

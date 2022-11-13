@@ -3,11 +3,9 @@ import { styled } from "@stitches/react";
 export const ProductContainer = styled("main", {
   display: "grid",
   gridTemplateColumns: "0.5fr 1fr",
-  alignItems: "stretch",
   gap: "1rem",
 
   maxWidth: 1180,
-  margin: "2rem auto",
 });
 export const ImageContainer = styled("div", {
   width: "100%",
@@ -52,7 +50,7 @@ export const ProductDetails = styled("div", {
     backgroundColor: "$green500",
     border: 0,
     color: "$white",
-    borderRadius: 0,
+    borderRadius: "8px",
     padding: "1.25rem",
 
     cursor: "pointer",
